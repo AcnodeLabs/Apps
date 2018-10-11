@@ -20,6 +20,8 @@ class /*Arkanoid2D*/ App : public AlgeApp {
 	GameObjectSnd  screen0cs;
 	GameObject star;
 	GameObject ring4color;
+	GameObject star5;
+	GameObject gamemodesbanner;
 
 public:
 
@@ -28,26 +30,29 @@ public:
 		SetTitle("ColorSwitch2D");
 		AddDefaultCamera(Camera::CAM_MODE_2D, OrthoTypes::ORIGIN_IN_TOP_LEFT_OF_SCREEN);
 		screen0cs.AddResourceWithSound(this, "Screen0cs", 0.5);
+		
 		AddResource(&star, "star", 10);
 		star.pos.x = originX;
 		star.pos.y = originY;
-		star.applyTopLeftCorrectionWRTorigin = false;
+		
+
+		//star.applyTopLeftCorrectionWRTorigin = false;
 		
 		PosRotScale starPrs;
-		starPrs.JuiceType = JUICE_ROTZ_PULSATE;
+		starPrs.JuiceType = 0;
 		starPrs.JuiceSpeed = 10;
 		for (int i = 0; i < 10; i++) {
 			starPrs.pos.x = randm()* rightSide;
 			starPrs.pos.y = randm()* bottomSide;
-			star.scale = 1;
+			//starPrs.scale = star.scale;
 			star.AddInstance(starPrs);
 			printf("Star(%.1f,%.1f)", starPrs.pos.x, starPrs.pos.y);
 		}
-
-		AddResource(&ring4color, "ring4color", 1);
+		
+		AddResource(&ring4color, "ring4color", 100);
 		ring4color.applyTopLeftCorrectionWRTorigin = true;
 		PosRotScale ringPrs;
-		ringPrs.JuiceType = JuiceTypes::JUICE_ROTZ;
+		ringPrs.JuiceType =0;
 	
 		ringPrs.pos = f3(originX,originY,0);
 		ringPrs.scale = 0.995;
@@ -61,6 +66,15 @@ public:
 		ringPrs.scale = 0.786;
 		ringPrs.JuiceSpeed = -85;
 		ring4color.AddInstance(ringPrs);
+
+		int gameModeYref = (originY + bottomSide) / 2  + 18;
+		AddResource(&star5, "star5", 20);
+		star5.AddInstance(f2(0.8*rightSide, gameModeYref));
+		star5.AddInstance(f2(0.2*rightSide, gameModeYref));
+
+		AddResource(&gamemodesbanner, "gamemodesbanner", 27);
+		gamemodesbanner.pos.y = gameModeYref;
+		gamemodesbanner.JuiceType = JuiceTypes::JUICE_PULSATE;
 
 	}
 	void processInput(PEG::CMD* p, float deltaT) {
