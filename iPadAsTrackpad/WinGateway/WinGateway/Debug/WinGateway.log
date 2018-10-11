@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  WinGateway.cpp
+d:\algesdk_jd3c\sdksrc\classlets\com\acnodelabs\funkit\canimator.hpp(62): warning C4305: '=': truncation from 'double' to 'float'
+d:\algesdk_jd3c\sdksrc\classlets\com\acnodelabs\funkit\canimator.hpp(63): warning C4305: '=': truncation from 'double' to 'float'
+d:\algesdk_jd3c\sdksrc\classlets\com\acnodelabs\funkit\canimator.hpp(64): warning C4305: '=': truncation from 'double' to 'float'
+d:\algesdk_jd3c\sdksrc\classlets\com\acnodelabs\funkit\canimator.hpp(69): warning C4305: 'argument': truncation from 'double' to 'float'
+d:\algesdk_jd3c\apps\ipadastrackpad\wingateway\wingateway\wingateway.cpp(31): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+d:\algesdk_jd3c\apps\ipadastrackpad\wingateway\wingateway\wingateway.cpp(31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\algesdk_jd3c\apps\ipadastrackpad\wingateway\wingateway\wingateway.cpp(32): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+d:\algesdk_jd3c\apps\ipadastrackpad\wingateway\wingateway\wingateway.cpp(32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\algesdk_jd3c\apps\ipadastrackpad\wingateway\wingateway\wingateway.cpp(98): warning C4305: 'argument': truncation from 'double' to 'float'
+  WinGateway.vcxproj -> D:\AlgeSDK_JD3C\Apps\iPadAsTrackpad\WinGateway\Debug\WinGateway.exe
